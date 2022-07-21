@@ -1,0 +1,11 @@
+{
+  "name": "payment-processing-practice",
+  "version": "1.0.0",
+  "description": "Stripe API practice",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Evan S Rathore",
+  "license": "ISC"
+}

@@ -14,7 +14,7 @@ const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY)
 const storeItems = new Map([
     [1, {priceInCents: 10000, name: "Learn React"}],
     [2, {priceInCents: 20000, name: "Learn CSS"}],
-    [3, {priceInCents: 30000, name: "Learn Angular"}]
+    [3, {priceInCents: 90000, name: "Learn Angular"}]
 ])
 
 app.get("/", (req, res) => {
@@ -54,6 +54,6 @@ app.post("/create-checkout-session", async (req, res) => {
     }
 })
 
-app.listen(3000, () => {
+app.listen(process.env.PORT || 3000, () => {
     console.log("Server running at http://localhost:3000")
 })

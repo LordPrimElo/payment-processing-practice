@@ -4,7 +4,8 @@
   "description": "Stripe API practice",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "devStart": "nodemon app.js",
+    "start": "nodemon app.js"
   },
   "author": "Evan S Rathore",
   "license": "ISC",

@@ -25,9 +25,12 @@
             }).then(res => {
                 if (res.ok) return res.json().then(json => Promise.reject(json))
             }).then(({url}) => {
-                console.log(url)
-                // window.location = url
-            }).catch(e => console.error(e))
+                console.log(url.url)
+                window.location = url.url
+            }).catch(e => {
+                console.warn(e)
+                window.location = e.url
+            })
         })
     </script>
 </body>

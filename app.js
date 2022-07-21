@@ -21,6 +21,10 @@ app.get("/", (req, res) => {
     res.render("index")
 })
 
+app.get("/success", (req, res) => {
+    res.render("success")
+})
+
 app.post("/create-checkout-session", async (req, res) => {
     try {
         const session = await stripe.checkout.sessions.create({
@@ -40,8 +44,8 @@ app.post("/create-checkout-session", async (req, res) => {
                     quantity: item.quantity
                 }
             }),
-            success_url: `${process.env.SERVER_URL}/success.html`,
-            cancel_url: `${process.env.SERVER_URL}/cancel.html`
+            success_url: `${process.env.SERVER_URL}/success`,
+            cancel_url: `${process.env.SERVER_URL}/cancel`
         })
         res.send({url: session.url})
 

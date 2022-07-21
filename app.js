@@ -9,7 +9,7 @@ app.use(express.urlencoded({extended: true}));
 app.set("view engine", "ejs")
 app.use(express.static("public"))
 
-const stripe = require("stripe")(process.env.STRIPE_PRIVATE_KEY)
+const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY)
 
 const storeItems = new Map([
     [1, {priceInCents: 10000, name: "Learn React"}],
